@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import Email from "../../components/email/index";
+import Email from "../../Components/Email/index";
 import { motion as m } from "framer-motion";
 
 function ContactPage() {
