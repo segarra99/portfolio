@@ -1,13 +1,13 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Navbar from "./components/navbar";
-import AboutPage from "./pages/about";
-import ContactPage from "./pages/contact";
-import HomePage from "./pages/home";
-import ProjectsPage from "./pages/projects";
-import ResumePage from "./pages/resume";
-import "./app.css";
+import Navbar from "./Components/Navbar";
+import AboutPage from "./Pages/About";
+import ContactPage from "./Pages/Contact";
+import HomePage from "./Pages/Home";
+import ProjectsPage from "./Pages/Projects";
+import ResumePage from "./Pages/Resume";
+import "./App.css";
 
 const App: React.FC = () => {
   const location = useLocation();
