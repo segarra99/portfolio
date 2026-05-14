@@ -1,6 +1,6 @@
-# Manuel Segarra's Web Development Portfolio
+# My Software Development Portfolio
 
-Welcome to my web development portfolio. This repository showcases my projects and skills in web development.
+Welcome to my software development portfolio. This repository showcases my projects and skills in software development.
 
 ## Technologies Used
 
