@@ -12,15 +12,7 @@ const { title, media, description, technologies, live, code, product } =
 <article>
     <Window title={title.toLowerCase() + "/"}>
         {media.endsWith(".webm") ? (
-            <video
-                src={media}
-                class="media"
-                autoplay
-                loop
-                muted
-                playsinline
-                preload="none"
-            />
+            <video src={media} class="media" autoplay loop muted playsinline />
         ) : (
             <img
                 src={media}
