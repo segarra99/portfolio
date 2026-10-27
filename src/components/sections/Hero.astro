@@ -6,7 +6,15 @@ import Window from "../ui/Window.astro";
     <header>
         <Window title="photo.png">
             <div class="frame">
-                <img src="/media/profile_pic.webp" alt="Profile picture" />
+                <img
+                    src="/media/profile_pic.webp"
+                    alt="Profile picture"
+                    width="340"
+                    height="340"
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                />
             </div>
         </Window>
         <div class="intro">
@@ -133,6 +141,7 @@ import Window from "../ui/Window.astro";
 
         img {
             width: clamp(160px, 20vw, 340px);
+            height: auto;
             outline: 3px dashed var(--accent1);
         }
     }
