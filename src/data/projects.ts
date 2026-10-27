@@ -43,7 +43,7 @@ export const projects: Project[] = [
         title: "Odds Feed Risk Guard",
         description:
             "Node.js service that processes real-time sports odds, validating incoming data to prevent inconsistent or incorrect odds from reaching downstream consumers and trading systems.",
-        media: "media/projects/odds-feed-risk-guard.webm",
+        media: "media/projects/odds-feed-risk-guard.avif",
         technologies: ["WebSockets", "Typescript", "Zod", "npm"],
         code: "https://github.com/segarra99/odds-feed-risk-guard.git",
     },
