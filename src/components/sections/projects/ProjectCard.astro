@@ -11,15 +11,15 @@ const { title, media, description, technologies, live, code, product } =
 
 <article>
     <Window title={title.toLowerCase() + "/"}>
-        {media.endsWith(".webm") ? (
-            <video src={media} class="media" autoplay loop muted playsinline />
-        ) : (
-            <img
-                src={media}
-                class="media"
-                alt={`${title} project screenshot`}
-            />
-        )}
+        <img
+            src={media}
+            class="media"
+            alt={`${title} project screenshot`}
+            width="800"
+            height="450"
+            loading="lazy"
+            decoding="async"
+        />
         <div class="info">
             <div>
                 <h3>{title}</h3>
@@ -112,11 +112,8 @@ const { title, media, description, technologies, live, code, product } =
         display: block;
         aspect-ratio: 16 / 9;
         border-bottom: 3px solid var(--border);
-
-        video& {
-            width: 100%;
-            object-fit: fill;
-        }
+        width: 100%;
+        height: auto;
     }
 
     .info {
