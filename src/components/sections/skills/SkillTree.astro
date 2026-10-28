@@ -14,9 +14,7 @@ const { category, skills } = Astro.props.group;
     </summary>
     <ul>
         {skills.map((skill, index, array) => (
-            <li class:list={{ highlight: skill.highlighted }}>
-                {index === array.length - 1 ? "`--" : "|--"} {skill.name}
-            </li>
+            <li class:list={{ highlight: skill.highlighted }}>{skill.name}</li>
         ))}
     </ul>
 </details>
@@ -62,6 +60,16 @@ const { category, skills } = Astro.props.group;
     ul {
         color: var(--sub);
         padding-left: 2rem;
+
+        & li {
+            &::before {
+                content: "|-- ";
+            }
+
+            &:last-child::before {
+                content: "`-- ";
+            }
+        }
 
         .highlight {
             color: var(--accent1);
