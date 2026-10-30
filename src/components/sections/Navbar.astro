@@ -98,7 +98,11 @@ const links = [
 
     if (themeToggle) {
         const updateThemeButton = () => {
-            const currentTheme = root.dataset.theme;
+            const currentTheme =
+                root.dataset.theme ||
+                (matchMedia("(prefers-color-scheme: light)").matches
+                    ? "light"
+                    : "dark");
             const nextTheme = currentTheme === "light" ? "dark" : "light";
 
             themeToggle.textContent = `[${currentTheme}]`;
@@ -119,7 +123,13 @@ const links = [
         themeToggle.addEventListener("click", () => {
             root.classList.add("theme-switch");
 
-            const theme = root.dataset.theme === "light" ? "dark" : "light";
+            const theme =
+                (root.dataset.theme ||
+                    (matchMedia("(prefers-color-scheme: light)").matches
+                        ? "light"
+                        : "dark")) === "light"
+                    ? "dark"
+                    : "light";
             root.dataset.theme = theme;
             try {
                 localStorage.setItem("theme", theme);
